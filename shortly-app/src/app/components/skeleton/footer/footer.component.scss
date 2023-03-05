@@ -1,0 +1,37 @@
+.container, footer{
+  background-color: hsl(265.71, 9.86%, 13.92%);
+}
+.capitalized{
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+.links{
+  font-size: 13px;
+  text-transform: capitalize;
+  font-weight: 600;
+  opacity: 0.7;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+.mb-0{
+  margin-left: 42px;
+}
+.social-icon{
+  margin: 10px;
+}
+a:hover{
+  color: #2acfcf !important;
+  opacity: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .text-left{
+    text-align: center !important;
+  }
+  .mb-0 {
+    margin-left: 0px;
+  }
+}

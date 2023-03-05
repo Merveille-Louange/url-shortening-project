@@ -1,0 +1,82 @@
+.body{
+  overflow: hidden;
+}
+.cards{
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 93px;
+  width: 70%;
+  margin: auto;
+}
+.vl {
+  border-left: 6px solid hsl(23deg 61% 41%);
+  height: 700px;
+  position: absolute;
+  left: 49%;
+}
+hr{
+  height: 8px;
+  background: hsl(23deg 61% 41%);
+  border: 1px solid hsl(23deg 61% 41%);
+  width: 60%;
+  position: absolute;
+  left: 19%;
+  top: 53%;
+}
+.search-section{
+  justify-content: center;
+  display: flex;
+  background: #f0f1f6;
+  //width: 80%;
+  padding: 40px;
+}
+.secondary-banner{
+  background:  hsl(257, 27%, 26%) url("../../../assets/images/bg-boost-desktop.svg");
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  p{
+    color: #fff;
+      font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 800;  }
+}
+.middle-section{
+  background-color: hsl(230, 25%, 95.29%);
+  position: relative;
+}
+.advance-stats{
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 55px;
+  /* width: 50%; */
+  justify-content: center;
+  p{
+    margin: auto;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .cards{
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+  }
+  .secondary-banner{
+    height: 300px;
+  p{
+    margin-bottom: 0.1rem;
+  }
+    .btn{
+      font-size: 18px !important;
+      font-weight: bold;
+      padding: 10px 35px;
+      border-radius: 25px;
+    }
+  }
+  .advance-stats p{
+    width: 100%;
+    margin-top: 20px;
+    opacity: 0.5;
+
+  }
+}

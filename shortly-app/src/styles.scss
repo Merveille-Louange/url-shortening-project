@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: 'f-normal';
+  src: url(assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+body{
+  font-family:f-normal;
+  Weights: 700
+}
+h2{
+  font-weight: 700;
+}
+
+
+.resSuccess {
+    text-align: center;
+    background: rgb(24 164 94 / 76%);
+    color: #fff;
+    padding: 10px;
+    font-style: italic;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+.resError{
+    text-align: center;
+    background: #fa9d4ec2;
+    color: #fff;
+    padding: 10px;
+    font-style: italic;
+    font-size: 13px;
+    border-radius: 5px;}
+
+.web{
+  display: block;
+}
+.mobile{
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  .web{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+}
+
+.btn-violet, .btn-voilet:hover{
+background-color: hsl(257, 27%, 26%);
+  color: #ffffff !important;
+}
+
+.btn-primary, .btn-primary:hover{
+  background-color: hsl(23deg 61% 41%)
+}
+.btn-light, .btn-light:hover{
+
+  background-color: transparent;
+}
+input{
+  &.error-msg{
+    color:hsl(0, 87%, 67%)!important;
+    border-color: hsl(0, 87%, 67%);
+  }
+}
+.spinner-border{
+  height: 1rem;
+  width: 1rem;
+
+}
+.btn:focus{
+  box-shadow: none !important;
+}
+.btn-rounded{
+  border-radius: 20px;
+}
+.btn-large{
+  padding-left: 8%;
+  padding-right: 8%;
+  font-weight: 500;
+  font-size: 16px !important;
+}
+.btn, .btn:hover{
+  text-transform: capitalize;
+  font-size: 12px;
+  border: transparent;
+  margin: 10px;
+  padding: 8px 20px;
+
+}
+.d-flex{
+  display: flex;
+}
+.text-center{
+  align-items: center;
+  margin: auto;
+}

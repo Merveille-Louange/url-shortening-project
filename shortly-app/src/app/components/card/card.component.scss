@@ -1,0 +1,44 @@
+.image-container{
+  background: hsl(257, 27%, 26%);
+  height: 75px;
+  position: absolute;
+  top: -36px;
+  justify-content: center;
+  margin: auto;
+  z-index: 1;
+  border-radius: 50%;
+  width: 75px;
+  left: 30px;
+}
+img{
+  width: 30px;
+  height: 30px;
+  margin: auto;
+}
+.card{
+  border: transparent;
+}
+.card-container{
+  position: relative;
+  margin: 20px;
+}
+.card-body{
+   padding-top: 75px;
+    margin-bottom: 40px;
+}
+.card-text:last-child {
+  margin-bottom: 0;
+  font-size: 13px;
+  opacity: .7;
+}
+.card-title{
+  font-weight: 600;
+}
+@media screen and (max-width: 900px) {
+.image-container{
+  left: 36%;
+}
+  h5,p{
+    text-align: center;
+  }
+}

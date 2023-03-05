@@ -1,0 +1,40 @@
+<div class="body">
+
+<app-banner></app-banner>
+
+  <div class="search-section">
+    <app-search></app-search>
+  </div>
+
+  <div class="middle-section">
+
+    <div class="advance-stats">
+      <h2>
+        Advanced Statistics
+      </h2>
+      <p>
+        Track how your own links are performing across the web with our advanced statistics dashboard
+      </p>
+    </div>
+
+    <hr class="web">
+    <div class="vl mobile"></div>
+
+    <div class="cards">
+      <ng-container *ngFor="let card of cards; let i=index" >
+        <app-card [cardData]="card" [ngStyle]="{'margin-top': (i*2)+'rem'}">
+        </app-card>
+
+      </ng-container>
+
+    </div>
+
+  </div>
+  <div class="secondary-banner">
+   <div class="text-center">
+     <p> boost your links today</p>
+     <button class="btn btn-primary btn-rounded btn-large">get started</button>
+   </div>
+  </div>
+
+</div>

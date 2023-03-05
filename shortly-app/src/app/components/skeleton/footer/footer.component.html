@@ -1,0 +1,29 @@
+
+  <footer class="text-center text-lg-start text-white">
+    <div class="container p-4 pb-0">
+      <section class="">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <img src="assets/images/logo_white.svg">
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4 mb-md-0" *ngFor="let link of links">
+            <h5 class="capitalized">{{link.title}}</h5>
+
+            <ul class="list-unstyled mb-0" *ngIf="link.sublinks && link.sublinks.length>0">
+              <li *ngFor="let sublink of link.sublinks" class="text-left">
+                <a href="{{sublink.url}}" class="text-white text-left links">{{sublink.name}}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <section class="mb-4 text-center">
+              <img class="social-icon" *ngFor="let link of socialMedias" src="assets/images/icon-{{link.name}}{{link.is_active?'_active' : ''}}.svg"
+              (mouseenter)="enableLink(link)" (mouseleave)="disableLink(link)"
+              >
+
+            </section>
+             </div>
+        </div>
+      </section>
+    </div>
+  </footer>

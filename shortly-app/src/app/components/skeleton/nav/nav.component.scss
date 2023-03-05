@@ -1,0 +1,31 @@
+.nav-link{
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 600;
+}
+.nav-link:hover{
+  color: rgba(0,0,0,1) !important;
+
+}
+
+@media screen and (min-width: 990px){
+  .btn-grp-link{
+    float: right;
+    position: absolute;
+    right: 6%;
+    top: 2%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .navbar-light .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+
+}
+.responsive__inactive{
+  display: none;
+}
+.responsive__active{
+  display: block;
+}

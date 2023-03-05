@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="d-flex form-container">
+    <div [formGroup]="heroForm" class="form-group">
+
+      <input placeholder="Shorten a link here" [ngClass]="link?.invalid && (link?.dirty || link?.touched) ? 'error-msg': ''" type="text" id="link" class="form-control"
+             formControlName="link" required>
+
+      <div *ngIf="link?.invalid && (link?.dirty || link?.touched)"
+           class="error-msg">
+
+        <div *ngIf="link?.errors?.['required']">
+          please add a link
+        </div>
+      </div>
+    </div>
+    <div class="shorten">
+      <button class="btn btn-primary" (click)="submitLink()">
+       <div class="spinner-border" role="status" *ngIf="shortenService.shortening">
+          <span class="sr-only">Loading...</span>
+        </div>
+        shorten it
+      </button>
+    </div>
+  </div>
+  <div class="links">
+    <ul>
+      <li *ngIf="shortenService.links?.length ==0">your links will be displayed here</li>
+      <li *ngFor="let link of shortenService.links">
+        <span class="original-link">{{link.full_short_link}}</span>
+        <hr class="border-line mobile">
+        <div class="float-right" #container>
+          <span class="mr-3">
+            {{link.short_link}}
+          </span>
+
+          <button ngxClipboard [cbContent]="link.short_link" [container]="container" (click) ='showCopyText(link)' [ngClass]="link.copied ? 'btn-violet' : 'btn-primary'" class="btn">
+            {{link.copied ? 'copied!' : 'copy'}}
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
