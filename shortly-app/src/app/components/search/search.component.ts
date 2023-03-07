@@ -28,7 +28,10 @@ get link() { return this.heroForm.get('link'); }
   submitLink(){
     if(this.heroForm.invalid)
       return
-    this.shortenService.shorten(this.link?.value)
+    this.shortenService.shorten(this.link?.value).then((res:any)=>{
+      console.log("logging response", res)
+      this.heroForm.reset();
+    })
 
   }
   showCopyText(link:link){

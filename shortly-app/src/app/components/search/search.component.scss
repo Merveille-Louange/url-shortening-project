@@ -56,6 +56,14 @@ li{
     margin: 0;
     padding: .375rem .75rem;
   }
+  span.original-link{
+  max-width: 600px !important;
+    width: 550px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+  }
 }
 .float-right{
   color: hsl(23deg 61% 41%);

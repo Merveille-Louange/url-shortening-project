@@ -35,17 +35,23 @@ public class RedisConfig {
     @Bean
     public JedisConnectionFactory redisConnectionFactory() {
 
-        RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration(redisHost,
-                redisPort);
-        if(!username.isEmpty()){
-            System.out.println("SETTING REDIS USERNAME AND PASSWORD");
-            redisStandaloneConfiguration.setUsername(username);
-            redisStandaloneConfiguration.setPassword(password);
-        }
+//        RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration(redisHost,
+//                redisPort);
+//        if(!username.isEmpty()){
+//            System.out.println("SETTING REDIS USERNAME AND PASSWORD");
+//            redisStandaloneConfiguration.setUsername(username);
+//            redisStandaloneConfiguration.setPassword(password);
+//
+//        }
+//
+//        redisStandaloneConfiguration.setDatabase(0);
+//        return new JedisConnectionFactory(redisStandaloneConfiguration);
+        JedisConnectionFactory factory = new JedisConnectionFactory();
+        factory.setHostName(redisHost);
+        factory.setPort(redisPort);
+        factory.setUsePool(true);
 
-        redisStandaloneConfiguration.setDatabase(0);
-        return new JedisConnectionFactory(redisStandaloneConfiguration);
-
+        return factory;
     }
 
     @Bean

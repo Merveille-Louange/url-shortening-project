@@ -26,9 +26,9 @@ export class ShortenService {
   }
   shorten(url:string){
     this.shortening = true;
-    this.httpService.post("shorten", {url, email:this.userdata?.email ? this.userdata.email : ''}).then((res:any)=>{
+   return this.httpService.post("shorten", {url, email:this.userdata?.email ? this.userdata.email : ''}).then((res:any)=>{
       if(res && res.code){
-        this.links.push(res);
+        this.links.unshift(res);
         localStorage.setItem("shortenedList", JSON.stringify(this.links));
       }else{
         this.errMsg = res?.message ? res.message : "Error trying to save your account, please try again later"
